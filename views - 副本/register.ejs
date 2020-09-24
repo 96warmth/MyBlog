@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>丸子博客</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="/dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="/css/login.css"/>
+	</head>
+	<body>
+		 <div class="box">
+		 	<form action="/reg/save" method="post">
+		 	<div class="little">
+			 	<div class="box1"><p class="glyphicon glyphicon-tree-deciduous">丸子博客</p></div>
+			 	<div class="box2 clearfix" >
+			 		<input  type="text" class="form-control" name="username" placeholder=" 请输入账号">
+			 		<div  class="glyphicon glyphicon-user"></div>
+			 		<input  type="text" class="form-control" name="pw" placeholder="请输入密码">
+					<div  class="glyphicon glyphicon-lock"></div>
+					<input  type="text" class="form-control" placeholder="再次输入密码">
+					<div class="glyphicon glyphicon-lock"></div>
+			 		<div class="glyphicon glyphicon-heart-empty" id="sex"  > 性别
+			 		    <label style="text-indent: 3em;">男</label>
+				        <input name="sex" type="radio" id="men" value="男" checked>
+				        <label>女</label>
+				        <input name="sex" type="radio" id="women" value="女">
+				    </div>
+			 		<input name="age" type="number" class="form-control" placeholder="年龄">
+					<div  class="glyphicon glyphicon-tree-conifer"></div>
+			 	</div>
+				<div class="box3">
+					<button type="submit" class="btn btn-default btn-sm btn-block">注 册</button>
+					<button type="button" class="btn-block btn btn-default btn-sm">返 回</button>
+				</div>
+			</div>
+			</form>
+		 </div>
+	</body>
+</html>

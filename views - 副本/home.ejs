@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>丸子博客</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="/css/home.css"/>
+		<link rel="stylesheet" href="/dist/css/bootstrap.css" />
+		<script type="text/javascript" src="/dist/js/jquery.js"></script>
+		<script type="text/javascript" src="/dist/js/bootstrap.js"></script>
+	</head>
+	<body>
+		<%- include('header') %>
+		<!--描述：广告栏-->
+		<div class="adv"><img src="img/adv.png"/></div>
+		
+		<!--描述：正文-->
+		<article>
+			<div class="space content">
+				<% for(var i=0;i<as.length;i++){ %>
+				<div class="row">
+					<div class="col-md-2 left-content" >
+						<div class="picture">
+							<a href="/myblog/<%= as[i].user._id%>">
+							<img src="/img/<%= as[i].user.avatar%>" class="img-circle">
+							<p><%= as[i].user.username%></p>	
+							</a>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="right-content">
+							<h3><a href="/article/info/<%= as[i]._id%>"><%= as[i].tittle%></a></h3>
+							<p class="text-muted"><%= as[i].context%></p>
+							<div class="time">
+								<p class="text-muted" >昨天22：00</p>
+								<p class="glyphicon glyphicon-eye-open"></p><span class="text-muted" > 999</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% } %>
+		</article>
+	
+			<nav claria-label="Page navigation" class="space pagenavi">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <% for(var i=0;i<count/10;i++){ %>
+				    	<li><a href="?page=<%= i+1 %>"><%= i+1 %></a></li>
+				    <% } %>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+			</nav>
+		<footer >
+			<div class="space"></div>
+		</footer>
+	</body>
+</html>

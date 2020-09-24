@@ -1,0 +1,87 @@
+
+	<header>
+			<div class="heads space">
+				<div class="left-box">
+					<img src="/img/星球.png"/>丸子星球
+				</div>
+			
+				<div class="right-box">
+							<% if(user){ %>
+							<div class="photo"><img src="/img/<%= user.avatar%>" class="img-circle">
+							<%= user.username%></div>
+							<div class="file" onclick="style.background='#2AB2CC'" >
+								<div type="button" class="glyphicon glyphicon-file" data-toggle="modal" data-target="#myModal"></div>
+							</div>	
+							<!-- Modal 一开始放在最低端，没放在user用户里面，所以就没法找到这个弹出这个模态框里的user._id，报错-->
+							<form action="/article/save" method="post">
+								<input type="hidden" name="aid" value="<%=user._id%>"/>
+								<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								  <div class="modal-dialog modal-lg" role="document">
+								    <div class="modal-content">
+								      <div class="header">
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								        <div class="mytitle" id="myModalLabel">发博文</div>
+								      	<div class="modal-time">
+										    <div class="col-sm-1">
+										    	<label for="inputPassword3" >标题:</label>
+										    </div>
+										    <div class="col-sm-7">
+										      <input type="text" id="inputPassword3" name="tittle" class="large" >
+										    </div>
+										     <div class="col-sm-4">
+										      <input type="text">
+										    </div>
+								      	</div>
+								      </div>
+								     
+							      <div class="mybody">
+								        <textarea name="context"></textarea>
+								  </div>
+								  <div class="footer">
+								        <button type="submit" class="btn btn-primary">发博文</button>
+								  </div>
+								    </div>
+								  </div>
+								</div>
+							</form>
+													
+							
+					<% }else{ %>
+					<div class="login"><a href="/login">登录 |</a><a href="/reg"> 注册</a></div>
+					<% } %>
+					
+					<form action="/search" id="sform">
+						<div class="search">
+							<input type="search" name="keyword" />
+							<div class="glyphicon glyphicon-search" onclick="sub()"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</header>
+		
+		<!--描述：导航栏-->
+		<nav>
+			<div  class="space">
+			<ul>
+				<li class="sel"><a href="/">首页</a></li>
+				<li><a href="">排行</a></li>
+				<li><a href="/myblog">我的博客</a></li>
+				<li><a href="">我的游戏</a></li>
+			</ul>
+			</div>
+		</nav>
+		
+
+<script type="text/javascript">
+	function sub(){
+		document.getElementById('sform').submit()
+		console.log('aaa')
+	}
+	
+	var local=location.href.indexOf('info');
+	if(local>-1){
+		var file = document.querySelector('.file');
+		file.style.display='none';
+	}//js隐藏到模态框（这个是我不需要的）
+</script>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>丸子博客</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="/css/myblog.css"/>
+		<link rel="stylesheet" href="/dist/css/bootstrap.css" />
+		<script type="text/javascript" src="/dist/js/jquery.js"></script>
+		<script type="text/javascript" src="/dist/js/bootstrap.js"></script>
+	</head>
+	<body>
+		<!--描述：头部-->
+		<%- include('header') %>
+		
+		<!--描述：正文-->
+		<article>
+			<div class="space">
+				<div class="bgphoto row">
+					<div class="col-md-12" >
+						<div class="littlebox" >
+							<img src="img/photo.jpg" class="img-circle"/>
+							
+							<a href="/myinfo">
+								<div class="glyphicon glyphicon-edit"></div>
+							</a>
+						
+							<div class="text-name">
+								<span>435</span>
+								<div class="myage glyphicon glyphicon-user">
+									<span>20岁</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="space content">
+			<% for(var i=0;i<as.length;i++){ %>
+				<div class=" row">
+					<div class="col-md-2" >
+						<div class="ranking">
+							<img src="/img/<%= as[i].user.avatar%>"  class="img-circle">
+							<div class="name"><%= as[i].user.username%></div>
+						</div>
+					</div>
+					<div class="col-md-10">
+						<div class="passage">
+							<a href=""><h4><%= as[i].tittle%></h4></a>
+							<p class="text-muted"><%=as[i].context%></p>
+							<div class="time">
+								<p class="text-muted" ><%= as[i].ctime%></p>
+								<p class="glyphicon glyphicon-eye-open"></p><span class="text-muted" > 999</span>
+								<p class="glyphicon glyphicon-trash"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			<%	} %>		
+						
+			</div>
+		</article>
+		
+		
+			<nav claria-label="Page navigation" class="space pagenavi">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li class="active"><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a id="diandian">...</a></li>
+				    <li><a href="#">20</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+			</nav>
+		
+		<footer>
+			<div class="space foot">丸子科技有限公司</div>
+		</footer>
+	
+	
+	<!-- Modal -->
+		<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog modal-lg"" role="document">
+		    <div class="modal-content">
+		      <div class="header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <div class="mytitle" id="myModalLabel">发博文</div>
+		      	<div class="modal-time">
+				    <div class="col-sm-1 ">
+				    	<label for="inputPassword3" >标题:</label>
+				    </div>
+				    <div class="col-sm-7 ">
+				      <input type="text" id="inputPassword3" class="large" >
+				    </div>
+				     <div class="col-sm-4">
+				      <input type="text">
+				    </div>
+		      	</div>
+		      </div>
+		     
+		      <div class="mybody">
+		        <p>One fine body&hellip;</p>
+		      </div>
+		      <div class="footer">
+		        <button type="button" class="btn btn-primary">发博文</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!--<script>
+			var file =document.querySelector(".glyphicon-file");
+			func
+			file.style.background ="red"
+			console.log(file)
+		</script>-->
+	</body>
+</html>

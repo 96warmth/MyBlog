@@ -1,0 +1,24 @@
+{
+  "name": "wanzi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\\"
+  ],
+  "author": "wanzi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.5",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "jquery": "^3.5.1"
+  }
+}

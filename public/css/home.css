@@ -1,0 +1,263 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+}
+.space{
+	height: 100%;
+	padding-left: 255px;
+	padding-right: 255px;
+	/*border: red solid 1px;*/
+/*	//这里不能用margin*/
+}
+/*//头部*/
+header{
+	height:60px;
+	background-color:#333333;
+}
+.heads{
+	display:flex;
+	height:60px;
+	justify-content: space-between;
+	align-content:center;
+	background-color:#333333;
+}
+
+.left-box{
+	width: 100%;
+	font-size: x-large;
+	font-weight: bold;
+	color:white;
+	display: flex;
+	align-items:center;
+}
+
+.left-box img{
+	width:50px;
+	height: 50px;
+}
+.right-box{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+.login{
+	color: grey;
+	width:40px;
+	font-size: 14px;
+}
+.login a{
+	color:#999999;
+}
+
+.right-box .search input{
+	height:34px;
+	border-radius: 6px;
+	background: black;
+	border: none;
+	color: white;
+	text-indent: 0.8em;
+}
+/*登录页*/
+.login{
+	width:80px;
+}
+.search{
+	width:200px;
+}
+.glyphicon-search{
+	width:30px;
+	height:30px;
+	margin-left: -28px;
+	margin-top:8px ;
+	color: white;
+	font-size:16px ;
+}
+.photo{
+	width:100px;
+	color: white;
+}
+.file{
+	width:50px;
+}
+.photo img{
+	width:35px;
+	height:35px;
+}
+
+
+.glyphicon-file{
+	font-size: 18px;
+	padding-left: 15px;
+	color:white;
+}
+
+/*导航栏*/
+nav{
+	height:60px;
+}
+nav ul{
+	height: 100%;
+}
+nav ul li{
+	width:70px;
+	height:100%;
+	margin-right: 30px;
+	line-height:60px;
+	text-align: center;
+	float:left;
+}
+nav ul li a{
+	color: #000000;
+	font-size: 15px;
+}
+.sel{
+	background: #2AB2CC;
+
+}
+.sel a{
+	color: white;
+}
+
+/*广告栏*/
+.adv{
+	height:105px;
+}
+div>img{
+	height:100%;
+	width: 100%;
+}
+
+/*正文*/
+article{
+	background: #EBECE6;
+}
+.content>div{
+	border: 1px solid white;
+	padding-top:20px ;
+	background-color: #F5F5F3;
+	border-bottom: none;
+}
+.left-content{
+	width:130px;
+	height:130px;
+	text-align: center;
+	/*padding: 10px;*/
+}
+.picture{
+	width: 130px;
+	height: 120px;
+	border-right: 1px solid white;
+	
+}
+.picture img{
+	margin-top:20px ;
+	width: 60px;
+	height:60px;
+	border: solid white 2px;
+}
+.right-content{
+	padding-left:25px;
+}
+.time{
+	display: flex;
+	justify-content:flex-end;
+	margin-right:25px;
+}
+.time p{
+	margin-left:60px;
+	
+}
+.time .glyphicon{
+	margin-top: 2px;
+	margin-right:4px;
+	color:#2AB2CC;
+}
+
+
+/*底部*/
+footer{
+	height:50px;
+	width: 100%;
+	background: #333333;
+}
+.foot{
+	color:white;
+	text-align: center;
+	line-height: 50px;
+}
+
+
+/*page*/
+.pagination li{
+	width: 5px;
+}
+.pagenavi{
+	display: flex;
+	justify-content: center;
+}
+
+#diandian{
+	border: none!important;
+}
+
+
+.mytitle{
+	color: deepskyblue;
+	font-size: 15px;
+	font-weight: bold;
+	padding-top:10px ;
+	padding-left:40px;
+}
+.modal-time{
+	height:50px;
+	width: 100%;
+	padding-top: 15px;
+}
+.large{
+	width: 300px;
+
+}
+.col-sm-1 {
+	position: relative;
+}
+.col-sm-1 label{
+	position: absolute;
+	font-size: 12px;
+	top:2px;
+	left: 40px;
+}
+.col-sm-7 {
+	margin-left: -10px;
+}
+.col-sm-7 input{
+	width:500px;
+}
+.modal-time input{
+	border: 1px solid lightgrey;
+}
+
+.col-sm-4 input{
+	width:250px;
+	
+}
+.mybody textarea{
+	margin: 0 auto;
+	margin-left:40px;
+	height: 250px;
+	width: 90%;
+	border: 1px solid lightgray;
+	
+}
+.footer{
+	color: white;
+	height:100px;
+	width: 100%;
+	text-align: center;
+	padding-top: 30px;
+}

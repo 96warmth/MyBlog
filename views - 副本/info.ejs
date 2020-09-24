@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>丸子博客</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!--<link rel="stylesheet" type="text/css" href="css/blog3.css"/>-->
+		<link rel="stylesheet" href="/dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="/css/info.css"/>
+	</head>
+	<body>
+		<!--描述：头部-->
+		<!--描述：导航栏-->
+		
+		<%- include('header')%>
+		
+		<!--描述：正文-->
+		<article>
+			<div class="space content">
+				<div class="row">
+					<div class="col-md-3 left-content" >
+						<div class="picture">
+							<div class="pesonel">
+								个人资料
+							</div>
+							<div class="picture2">
+								<div class="special">
+									<img src="/img/<%=info.user.avatar%>" class="img-circle">
+									<p><%=info.user.username%></p>	
+									<span>我是要成为IT巨头的...人</span>
+								</div>
+								<div>
+									<div class="eye"><p class="glyphicon glyphicon-eye-open"></p><span class="text-muted" > 999999</span></div>
+									<div class="file"><p class="glyphicon glyphicon-file"></p><span class="text-muted" >9</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--文章题目-->
+					<div class="col-md-9 ">
+						<div class="right-content allpassage">
+							<a href=""><h4><%=info.tittle%></h4></a>
+							<div class="time">
+								<p class="text-muted" >2020-9-15 22：00</p>
+								<p class="glyphicon glyphicon-file">评论</p><span class="text-muted" >(10)</span>
+								<p class="glyphicon glyphicon-eye-open text-muted"></p><span class="text-muted" > 999</span>
+							</div>
+						</div>
+						<!--正文-->
+						<div class="right-content allpassage">
+						<%=info.context%>
+						</div>
+						<!--发表评论-->
+						<% if(user){ %>
+						<div class="right-content comment">
+							<form action="/article/savecomment" method="post">
+								<input type="hidden" name="uid" value="<%= user._id%>"/>
+								<input type="hidden" name="aid" value="<%= info._id%>" />
+								<p class="text-muted words">——评论——</p>
+							  	<textarea name="comment">。。。。</textarea>
+							  	<div class="comment-button">
+							  		<button type="submit" class="btn btn-info">发评论</button>
+							  	</div>
+							</form>
+						</div>
+						<% } %>
+						<!--评论区-->
+						<div class="right-content comment">
+							<% for(var i=0;i<comm.length;i++){%>
+							<div class="comment-area">
+								<div class="myhead">
+									<img src="/img/<%= comm[i].user.avatar%>" class="img-circle picture">
+								</div>
+								<div class="mycomment">
+									<div class="left">
+										<p><%= comm[i].user.username%></p>
+										<p><%= comm[i].comment%></p>
+									</div>
+									<div class="right">
+										<p class="text-muted" >2<%= comm[i].ctime%></p>
+									</div>
+								</div>
+							</div>
+							<% } %>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</article>
+	
+			<nav claria-label="Page navigation" class="space pagenavi">
+				  <ul class="pagination">
+				    <li>
+				      <a href="#" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+				    <li><a href="#">1</a></li>
+				    <li class="active"><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a id="diandian">...</a></li>
+				    <li><a href="#">20</a></li>
+				    <li>
+				      <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+			</nav>
+		<footer >
+			<div class="space"></div>
+		</footer>
+	</body>
+</html>

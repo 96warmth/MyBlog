@@ -1,0 +1,92 @@
+.bgcolor{
+	width: 100%;
+	height:700px;
+	background: #EBECE6;
+	padding-top: 50px;
+}
+.box{
+	width: 600px;
+	height:520px;
+	background: white;
+	margin:0 auto;
+	padding-left:120px ;
+	padding-right:120px ;
+	padding-top: 20px;
+	position: relative;
+}
+.tittle{
+	border-bottom: 3px lightblue solid;
+	height:25px;
+}
+.mycontent{
+	width:400px;
+	margin-top: 30px;
+	height:350px;
+}
+.photo{
+	text-align: center;
+}
+.photo img{
+	width: 70px;
+	height:70px;
+	border: solid white 2px;
+	margin-bottom: 15px;
+}
+.glyphicon-user,.glyphicon-lock{
+	position: relative;
+}
+#psd1,#psd2,#small,#age{
+	position: absolute;
+	left: -50px;
+	top:0px;
+}
+
+
+.mylabel{
+	/*padding-left:10px ;*/
+	height:30px;
+	
+}
+.nickname{
+	margin-top: 7px;
+	font-size: 14px!important;
+	
+}
+.glyphicon-user,.glyphicon-lock{
+	float:left;
+	margin-top:1px ;
+	margin-left:-17px ;
+}
+.mylabel>form>div{
+	height:50px;
+	color: gray;
+	
+}
+.glyphicon-heart{
+	float:left;
+	margin-top:2px ;
+	margin-left:-17px ;
+}
+.sex{
+	margin-top:5px;
+}
+.btn{
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+.btn>button{
+	width: 140px;
+	height:37px;
+	background: #2AB2CC;
+	border:none ;
+	color:white;
+	font-size:15px ;
+}
+
+.footer a{
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
+}
